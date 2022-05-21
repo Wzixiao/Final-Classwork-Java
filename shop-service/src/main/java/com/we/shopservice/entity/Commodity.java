@@ -37,7 +37,7 @@ public class Commodity implements Serializable {
     /**
      * 表述
      */
-    private String describe;
+    private String describeText;
 
     /**
      * 封面地址
@@ -46,6 +46,10 @@ public class Commodity implements Serializable {
 
     /**
      * 分类（枚举类型）
+     * {
+     *     数码产品 ：digital
+     *     日用品：daily necessities
+     * }
      */
     private String classification;
 
