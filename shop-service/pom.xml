@@ -14,10 +14,6 @@
     <description>shop-service</description>
     <packaging>jar</packaging>
 
-    <properties>
-        <java.version>8</java.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>mysql</groupId>
@@ -33,8 +29,8 @@
             <artifactId>mybatis-plus-generator</artifactId>
         </dependency>
         <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
         </dependency>
     </dependencies>
 

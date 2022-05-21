@@ -9,6 +9,10 @@
         <relativePath/>
     </parent>
 
+    <modules>
+        <module>shop-service</module>
+    </modules>
+
     <groupId>com.we</groupId>
     <artifactId>FinalClassworkBackend</artifactId>
     <version>0.0.1</version>
@@ -16,16 +20,13 @@
     <description>FinalClassworkBackend</description>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>shop-service</module>
-    </modules>
-
     <properties>
         <java.version>8</java.version>
         <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
         <alibaba-cloud.version>2.2.7.RELEASE</alibaba-cloud.version>
         <sentinel.version>1.8.1</sentinel.version>
         <mybatis-plus.version>3.5.1</mybatis-plus.version>
+        <velocity-engine-core.version>2.3</velocity-engine-core.version>
     </properties>
 
     <dependencyManagement>
@@ -56,10 +57,10 @@
                 <version>${mybatis-plus.version}</version>
             </dependency>
             <dependency>
-                <groupId>javax.xml.bind</groupId>
-                <artifactId>jaxb-api</artifactId>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>${velocity-engine-core.version}</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 
@@ -83,6 +84,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
         </dependency>
     </dependencies>
 

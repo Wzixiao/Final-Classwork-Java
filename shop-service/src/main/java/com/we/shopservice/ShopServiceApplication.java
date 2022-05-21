@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wRan
+ * @since 2022-05-22
  */
 @SpringBootApplication
 public class ShopServiceApplication {
