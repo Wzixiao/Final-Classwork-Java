@@ -1,9 +1,9 @@
 package com.we.shopservice;
 
-import com.we.shopservice.entity.Commodity;
-import com.we.shopservice.entity.Details;
 import com.we.shopservice.mapper.CommodityMapper;
 import com.we.shopservice.mapper.DetailsMapper;
+import entity.Commodity;
+import entity.Details;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
