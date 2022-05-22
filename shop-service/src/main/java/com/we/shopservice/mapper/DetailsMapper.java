@@ -4,6 +4,7 @@ package com.we.shopservice.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import entity.Details;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 /**
  * <p>
@@ -15,5 +16,11 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface DetailsMapper extends BaseMapper<Details> {
-
+    /**
+     * 通过外键cid获取商品的相信信息
+     * @param cId 外键id
+     * @return 单个实体类
+     */
+    @Select("select * from details where c_id = #{cId}")
+    Details selectBycId(int cId);
 }

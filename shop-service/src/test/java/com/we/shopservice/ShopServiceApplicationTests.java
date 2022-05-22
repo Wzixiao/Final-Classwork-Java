@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @SpringBootTest
 class ShopServiceApplicationTests {
@@ -21,19 +22,22 @@ class ShopServiceApplicationTests {
 
     @Test
     void contextLoads() {
-        Commodity commodity = new Commodity();
-        commodity.setClassification("daily necessities");
-        commodity.setCoverAddress("pen.webp");
-        commodity.setPrice(new BigDecimal("3.65"));
-        commodity.setDescribeText("一款神奇的钢笔!");
-        commodityMapper.insert(commodity);
+        List<Commodity> commodities = commodityMapper.selectAllCommodityAndInformation();
+        commodities.forEach(System.out::println);
 
-        Details details = new Details();
-        details.setCId(1024274433);
-        details.setQuantity(50);
-        details.setExplainText("一款神奇的钢笔！");
-        details.setParameters("{\"长度\":\"16cm\",\"材质\":\"0.3碳钢\"}");
-        detailsMapper.insert(details);
+//        Commodity commodity = new Commodity();
+//        commodity.setClassification("daily necessities");
+//        commodity.setCoverAddress("pen.webp");
+//        commodity.setPrice(new BigDecimal("3.65"));
+//        commodity.setDescribeText("一款神奇的钢笔!");
+//        commodityMapper.insert(commodity);
+//
+//        Details details = new Details();
+//        details.setCId(1024274433);
+//        details.setQuantity(50);
+//        details.setExplainText("一款神奇的钢笔！");
+//        details.setParameters("{\"长度\":\"16cm\",\"材质\":\"0.3碳钢\"}");
+//        detailsMapper.insert(details);
 
     }
 

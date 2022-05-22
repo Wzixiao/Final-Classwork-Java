@@ -1,12 +1,13 @@
 package entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import lombok.Getter;
-import lombok.Setter;
+
+import lombok.*;
 import lombok.experimental.Accessors;
 
 /**
@@ -17,8 +18,9 @@ import lombok.experimental.Accessors;
  * @author wRan
  * @since 2022-05-22 12:39:17
  */
-@Getter
-@Setter
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Accessors(chain = true)
 public class Commodity implements Serializable {
 
@@ -54,5 +56,10 @@ public class Commodity implements Serializable {
      */
     private String classification;
 
+    /**
+     * 对应的详情
+     */
+    @TableField(exist = false)
+    private Details details;
 
 }
