@@ -5,11 +5,10 @@
     <parent>
         <groupId>com.we</groupId>
         <artifactId>FinalClassworkBackend</artifactId>
-        <version>0.0.1</version>
+        <version>0.0.2</version>
     </parent>
 
     <artifactId>shop-service</artifactId>
-    <version>0.0.1</version>
     <name>shop-service</name>
     <description>shop-service</description>
     <packaging>jar</packaging>
@@ -43,7 +42,7 @@
         <dependency>
             <groupId>com.we</groupId>
             <artifactId>entity-api</artifactId>
-            <version>0.0.1</version>
+            <version>0.0.2</version>
         </dependency>
     </dependencies>
 
