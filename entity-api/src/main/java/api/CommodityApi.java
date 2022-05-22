@@ -1,6 +1,9 @@
 package api;
 
 import config.ResultMap;
+import entity.Commodity;
+
+import java.util.List;
 
 /**
  * @author wRan
@@ -14,4 +17,5 @@ public interface CommodityApi {
      */
     ResultMap<?> getAll();
 
+    ResultMap<List<Commodity>> getAllAndInformation();
 }

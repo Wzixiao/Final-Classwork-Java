@@ -21,7 +21,7 @@ public class CommodityController implements CommodityApi {
     public CommodityController(CommodityServiceImpl commodityService) {
         this.commodityService = commodityService;
     }
-    
+
     @Override
     @RequestMapping("/getAll")
     public ResultMap<List<Commodity>> getAll(){
@@ -29,6 +29,12 @@ public class CommodityController implements CommodityApi {
         return ResultMap.build(ResultMap.Status.SUCCESS,list);
     }
 
+    @Override
+    @RequestMapping("/getAllAndInformation")
+    public ResultMap<List<Commodity>> getAllAndInformation() {
+        List<Commodity> commodities = commodityService.selectAllCommodityAndInformation();
+        return ResultMap.build(ResultMap.Status.SUCCESS,commodities);
+    }
 
 
 }

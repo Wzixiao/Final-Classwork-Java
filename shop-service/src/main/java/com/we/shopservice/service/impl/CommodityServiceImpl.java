@@ -7,6 +7,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import entity.Commodity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务实现类
@@ -17,5 +19,15 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class CommodityServiceImpl extends ServiceImpl<CommodityMapper, Commodity> implements ICommodityService {
+    final CommodityMapper commodityMapper;
+
+    public CommodityServiceImpl(CommodityMapper commodityMapper) {
+        this.commodityMapper = commodityMapper;
+    }
+
+    @Override
+    public List<Commodity> selectAllCommodityAndInformation() {
+        return commodityMapper.selectAllCommodityAndInformation();
+    }
 
 }
