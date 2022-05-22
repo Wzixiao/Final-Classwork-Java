@@ -25,9 +25,6 @@ class ShopServiceApplicationTests {
 
     @Test
     void contextLoads() {
-        List<Commodity> commodities = commodityMapper.selectAllCommodityAndInformation();
-
-
 
     }
 

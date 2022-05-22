@@ -31,4 +31,9 @@ public class CommodityServiceImpl extends ServiceImpl<CommodityMapper, Commodity
         return commodityMapper.selectAllCommodityAndInformation();
     }
 
+    @Override
+    public Boolean addCommodityAndDetails() {
+        return null;
+    }
+
 }

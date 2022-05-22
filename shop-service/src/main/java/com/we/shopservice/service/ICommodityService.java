@@ -19,4 +19,6 @@ public interface ICommodityService extends IService<Commodity> {
      * @return List
      */
     List<Commodity> selectAllCommodityAndInformation();
+
+    Boolean addCommodityAndDetails();
 }

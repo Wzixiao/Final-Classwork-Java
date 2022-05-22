@@ -1,16 +1,25 @@
-server:
+server:  # 端口
   port: 8081
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
     url: jdbc:mysql://47.106.94.112/finalclasswork_shop?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8
-  mvc:
+  mvc: # 静态资源映射
     static-path-pattern: /res/**
+  servlet:
+    multipart:
+      enabled: true # 是否支持多文件上传
+      max-file-size: 5MB # 上传文件的最大值
+      resolve-lazily: false # 是否在文件或参数访问时延迟解析多部分请求
+
 mybatis-plus:
   configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  type-aliases-package: "com.my.entity"
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 日志类
+  type-aliases-package: "com.my.entity" # 别名
+
+
 
 
