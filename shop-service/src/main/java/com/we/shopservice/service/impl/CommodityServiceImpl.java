@@ -19,6 +19,7 @@ import java.util.List;
  */
 @Service
 public class CommodityServiceImpl extends ServiceImpl<CommodityMapper, Commodity> implements ICommodityService {
+
     final CommodityMapper commodityMapper;
 
     public CommodityServiceImpl(CommodityMapper commodityMapper) {

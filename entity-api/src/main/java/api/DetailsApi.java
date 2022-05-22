@@ -12,4 +12,5 @@ public interface DetailsApi {
      * @return Result.class
      */
     ResultMap<?> getAll();
+
 }

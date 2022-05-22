@@ -17,5 +17,13 @@ public interface CommodityApi {
      */
     ResultMap<?> getAll();
 
+    /**
+     * <p>
+     *     获取所有商品和所对应的信息(禁止使用)
+     * </p>
+     * @return ResultMap
+     */
+    @Deprecated
     ResultMap<List<Commodity>> getAllAndInformation();
+
 }
