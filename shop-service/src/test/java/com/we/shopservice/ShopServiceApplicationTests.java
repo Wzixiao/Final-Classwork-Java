@@ -28,12 +28,12 @@ class ShopServiceApplicationTests {
         commodity.setDescribeText("一款神奇的钢笔!");
         commodityMapper.insert(commodity);
 
-            Details details = new Details();
-            details.setCId(1024274433);
-            details.setQuantity(50);
-            details.setExplain("真的是一款神奇的钢笔");
-            details.setParameters("{\"材质\":\"钢\",\"长度\":\"16cm\"}");
-            detailsMapper.insert(details);
+        Details details = new Details();
+        details.setCId(1024274433);
+        details.setQuantity(50);
+        details.setExplainText("一款神奇的钢笔！");
+        details.setParameters("{\"长度\":\"16cm\",\"材质\":\"0.3碳钢\"}");
+        detailsMapper.insert(details);
 
     }
 

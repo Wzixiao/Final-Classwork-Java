@@ -27,6 +27,7 @@
         <sentinel.version>1.8.1</sentinel.version>
         <mybatis-plus.version>3.5.1</mybatis-plus.version>
         <velocity-engine-core.version>2.3</velocity-engine-core.version>
+        <fastjson.version>2.0.3</fastjson.version>
     </properties>
 
     <dependencyManagement>
@@ -60,6 +61,11 @@
                 <groupId>org.apache.velocity</groupId>
                 <artifactId>velocity-engine-core</artifactId>
                 <version>${velocity-engine-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

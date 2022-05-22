@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 import java.util.Date;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
@@ -50,7 +51,7 @@ public class Details implements Serializable {
     /**
      * 说明
      */
-    private String explain;
+    private String explainText;
 
     /**
      * 对应商品（外键）
