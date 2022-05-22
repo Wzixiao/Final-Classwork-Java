@@ -1,9 +1,10 @@
 package com.we.shopservice.service.impl;
 
-import com.we.shopservice.entity.Commodity;
+
 import com.we.shopservice.mapper.CommodityMapper;
 import com.we.shopservice.service.ICommodityService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import entity.Commodity;
 import org.springframework.stereotype.Service;
 
 /**

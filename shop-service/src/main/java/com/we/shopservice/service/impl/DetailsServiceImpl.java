@@ -1,9 +1,9 @@
 package com.we.shopservice.service.impl;
 
-import com.we.shopservice.entity.Details;
 import com.we.shopservice.mapper.DetailsMapper;
 import com.we.shopservice.service.IDetailsService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import entity.Details;
 import org.springframework.stereotype.Service;
 
 /**

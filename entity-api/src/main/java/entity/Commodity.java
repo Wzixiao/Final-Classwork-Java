@@ -1,7 +1,9 @@
-package com.we.shopservice.entity;
+package entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+
+import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import lombok.Getter;
@@ -21,6 +23,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class Commodity implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     /**

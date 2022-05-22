@@ -1,7 +1,7 @@
 package com.we.shopservice.service;
 
-import com.we.shopservice.entity.Commodity;
 import com.baomidou.mybatisplus.extension.service.IService;
+import entity.Commodity;
 
 /**
  * <p>

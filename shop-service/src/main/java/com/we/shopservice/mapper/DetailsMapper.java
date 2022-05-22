@@ -1,7 +1,8 @@
 package com.we.shopservice.mapper;
 
-import com.we.shopservice.entity.Details;
+
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import entity.Details;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

@@ -36,6 +36,11 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.we</groupId>
+            <artifactId>entity-api</artifactId>
+            <version>0.0.1</version>
+        </dependency>
     </dependencies>
 
     <build>

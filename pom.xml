@@ -11,6 +11,7 @@
 
     <modules>
         <module>shop-service</module>
+        <module>entity-api</module>
     </modules>
 
     <groupId>com.we</groupId>

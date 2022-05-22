@@ -1,9 +1,9 @@
 package com.we.shopservice.controller;
 
-import com.we.shopservice.config.ResultMap;
-import com.we.shopservice.entity.Commodity;
+import api.CommodityApi;
 import com.we.shopservice.service.impl.CommodityServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
+import config.ResultMap;
+import entity.Commodity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +14,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/commodity")
-public class CommodityController {
+public class CommodityController implements CommodityApi {
 
     final CommodityServiceImpl commodityService;
 
@@ -25,6 +25,7 @@ public class CommodityController {
     /**
      * @return 全部的商品
      */
+    @Override
     @RequestMapping("/getAll")
     public ResultMap<?> getAll(){
         List<Commodity> list = commodityService.list();

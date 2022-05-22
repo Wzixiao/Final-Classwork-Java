@@ -1,4 +1,4 @@
-package com.we.shopservice.config;
+package config;
 
 import lombok.*;
 
