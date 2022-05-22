@@ -26,6 +26,10 @@ public class ResultMap<T> {
         return new ResultMap<>(status.getCode(), status.getReason(), data);
     }
 
+    public static <T> ResultMap<T> build(Status status,String message) {
+        return new ResultMap<>(status.getCode(), message);
+    }
+
     public static <T> ResultMap<T> build(Status status, String message, T data) {
         return new ResultMap<>(status.getCode(), message, data);
     }

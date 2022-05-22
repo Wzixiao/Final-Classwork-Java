@@ -12,17 +12,13 @@ import java.util.List;
  */
 public interface CommodityApi {
     /**
-     * <p>
-     *     获取所有商品
-     * </p>
+     *  获取所有商品
      * @return ResultMap
      */
     ResultMap<?> getAll();
 
     /**
-     * <p>
-     *     获取所有商品和所对应的信息(暂时禁止使用)
-     * </p>
+     *  获取所有商品和所对应的信息(暂时禁止使用)
      * @return ResultMap
      */
     ResultMap<List<Commodity>> getAllAndInformation();
@@ -31,7 +27,6 @@ public interface CommodityApi {
      * 添加商品 包含详细信息以及图片
      * @param pictures 多张图片
      * @return 成功或者失败
-     * @throws IOException io堵塞等异常
      */
-    ResultMap<Boolean> addCommodity(MultipartFile[] pictures) throws IOException;
+    ResultMap<List<String>> addCommodity(MultipartFile[] pictures);
 }
