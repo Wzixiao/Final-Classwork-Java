@@ -27,7 +27,7 @@ public class CommodityController implements CommodityApi {
      */
     @Override
     @RequestMapping("/getAll")
-    public ResultMap<?> getAll(){
+    public ResultMap<List<Commodity>> getAll(){
         List<Commodity> list = commodityService.list();
         return ResultMap.build(ResultMap.Status.SUCCESS,list);
     }
