@@ -22,6 +22,7 @@ public class CommodityController implements CommodityApi {
         this.commodityService = commodityService;
     }
 
+
     @Override
     @RequestMapping("/getAll")
     public ResultMap<List<Commodity>> getAll(){
