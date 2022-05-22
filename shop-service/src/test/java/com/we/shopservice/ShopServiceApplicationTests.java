@@ -25,25 +25,9 @@ class ShopServiceApplicationTests {
 
     @Test
     void contextLoads() {
-//        List<Commodity> commodities = commodityMapper.selectAllCommodityAndInformation();
-//        commodities.forEach(System.out::println);
+        List<Commodity> commodities = commodityMapper.selectAllCommodityAndInformation();
 
-//        Commodity commodity = new Commodity();
-//        commodity.setClassification("daily necessities");
-//        commodity.setCoverAddress("pen.webp");
-//        commodity.setPrice(new BigDecimal("3.65"));
-//        commodity.setDescribeText("一款神奇的钢笔!");
-//        commodityMapper.insert(commodity);
-//
-//        Details details = new Details();
-//        details.setCId(1024274433);
-//        details.setQuantity(50);
-//        details.setExplainText("一款神奇的钢笔！");
-//        Map<String, String> map = new HashMap<>();
-//        map.put("长度","16cm");
-//        map.put("材质","不锈钢");
-//        details.setParameters(map);
-//        detailsMapper.insert(details);
+
 
     }
 

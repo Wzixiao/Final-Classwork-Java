@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.Map;
 
 import com.baomidou.mybatisplus.extension.handlers.FastjsonTypeHandler;
+import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import lombok.experimental.Accessors;
@@ -42,8 +43,7 @@ public class Details implements Serializable {
     /**
      * 商品参数
      */
-
-    private String parameters;
+    private Map<String,String> parameters;
 
     /**
      * 创建时间

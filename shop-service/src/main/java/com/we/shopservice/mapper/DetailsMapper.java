@@ -2,9 +2,14 @@ package com.we.shopservice.mapper;
 
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
 import entity.Details;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
+
+import java.util.HashMap;
 
 /**
  * <p>
@@ -22,5 +27,8 @@ public interface DetailsMapper extends BaseMapper<Details> {
      * @return 单个实体类
      */
     @Select("select * from details where c_id = #{cId}")
+    @Results(id = "selectBycId",value = {
+            @Result(property = "parameters",column = "parameters",javaType = HashMap.class,typeHandler = JacksonTypeHandler.class)
+    })
     Details selectBycId(int cId);
 }
