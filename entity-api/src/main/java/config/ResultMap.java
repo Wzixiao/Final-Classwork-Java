@@ -45,7 +45,7 @@ public class ResultMap<T> {
         SUCCESS("200", "成功！"),
         LOGIN_SUCCESS("201", "登录成功！"),
         FAIL("100", "未知失败！"),
-        LOGINFAIL("101", "用户名或密码错误！"),
+        LOGIN_FAIL("101", "用户名或密码错误！"),
         SESSION_EXPIRED("102", "会话到期！"),
         INSUFFICIENT_PERMISSIONS("103", "权限不足！"),
         TOKEN_EXCEPTION("104", "Token异常！"),

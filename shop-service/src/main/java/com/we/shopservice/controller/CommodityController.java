@@ -32,4 +32,6 @@ public class CommodityController implements CommodityApi {
         return ResultMap.build(ResultMap.Status.SUCCESS,list);
     }
 
+
+
 }
