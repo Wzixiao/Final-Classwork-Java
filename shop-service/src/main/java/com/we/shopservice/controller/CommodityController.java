@@ -50,7 +50,8 @@ public class CommodityController implements CommodityApi {
         //todo 未完成
         System.out.println(Arrays.toString(pictures));
         System.out.println(commodity);
-//        return picturesSaveTools.save(pictures);
+
+
         ArrayList<String> objects = new ArrayList<>();
         objects.add("a");
         return ResultMap.build(ResultMap.Status.SUCCESS,objects);

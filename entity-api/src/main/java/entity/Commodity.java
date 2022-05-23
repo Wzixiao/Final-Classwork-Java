@@ -26,6 +26,7 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @AllArgsConstructor
 @Accessors(chain = true)
+@TableName(value = "commodity",autoResultMap = true)
 public class Commodity implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -49,6 +50,7 @@ public class Commodity implements Serializable {
     /**
      * 封面地址
      */
+    @TableField(typeHandler = FastjsonTypeHandler.class)
     private List<String> coverAddress;
 
     /**

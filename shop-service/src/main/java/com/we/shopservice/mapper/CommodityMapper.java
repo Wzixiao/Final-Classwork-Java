@@ -3,7 +3,6 @@ package com.we.shopservice.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.handlers.FastjsonTypeHandler;
-import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
 import entity.Commodity;
 import entity.Details;
 import org.apache.ibatis.annotations.*;
@@ -19,11 +18,12 @@ import java.util.List;
  */
 @Mapper
 public interface CommodityMapper extends BaseMapper<Commodity> {
+
     /**
      * 查询全部的商品以及对应的信息
      * @return List
      */
-    @Select("select * from commodity")
+    @Select("SELECT id,price,describe_text,cover_address,classification FROM commodity")
     @Results(id = "selectAllCommodityAndInformation",value = {
             @Result(column = "id",property = "id"),
             @Result(column = "cover_address",property = "coverAddress",javaType = List.class,typeHandler = FastjsonTypeHandler.class),

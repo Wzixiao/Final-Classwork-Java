@@ -29,4 +29,6 @@ public class DetailsController implements DetailsApi {
         List<Details> list = detailsService.list();
         return ResultMap.build(ResultMap.Status.SUCCESS, list);
     }
+
+
 }
