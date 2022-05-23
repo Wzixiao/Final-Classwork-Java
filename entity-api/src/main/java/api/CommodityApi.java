@@ -2,6 +2,8 @@ package api;
 
 import config.ResultMap;
 import entity.Commodity;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -26,7 +28,8 @@ public interface CommodityApi {
     /**
      * 添加商品 包含详细信息以及图片
      * @param pictures 多张图片
+     * @param commodity 商品对象
      * @return 成功或者失败
      */
-    ResultMap<List<String>> addCommodity(MultipartFile[] pictures);
+    ResultMap<List<String>> addCommodity(@RequestPart("pictures") MultipartFile[] pictures, @RequestPart("commodity") Commodity commodity);
 }

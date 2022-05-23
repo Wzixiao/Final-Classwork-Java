@@ -1,6 +1,7 @@
 package com.we.shopservice.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.handlers.FastjsonTypeHandler;
 import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
 import entity.Details;
 import org.apache.ibatis.annotations.Mapper;
@@ -27,7 +28,7 @@ public interface DetailsMapper extends BaseMapper<Details> {
      */
     @Select("select * from details where c_id = #{cId}")
     @Results(id = "selectBycId",value = {
-            @Result(property = "parameters",column = "parameters",javaType = HashMap.class,typeHandler = JacksonTypeHandler.class)
+            @Result(property = "parameters",column = "parameters",javaType = HashMap.class,typeHandler = FastjsonTypeHandler.class)
     })
     Details selectBycId(int cId);
 }

@@ -6,7 +6,11 @@ import com.baomidou.mybatisplus.annotation.TableId;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.extension.handlers.FastjsonTypeHandler;
 import lombok.*;
 import lombok.experimental.Accessors;
 
@@ -45,7 +49,7 @@ public class Commodity implements Serializable {
     /**
      * 封面地址
      */
-    private String coverAddress;
+    private List<String> coverAddress;
 
     /**
      * 分类（枚举类型）
